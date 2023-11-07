@@ -1,2 +1,2 @@
-# techdegree_proj_FAKE
- First project to use Git
+# First Techdegree EXAMPLE Project
+  This is just to practice uploading repositories to GitHub.
