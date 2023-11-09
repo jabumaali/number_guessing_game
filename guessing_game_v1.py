@@ -1,6 +1,10 @@
 """
 Data Analysis Techdegree
 Project 1 - A Number Guessing Game
+"""
+# Submitting for "Exceeds expectations"
+# Please reject submission otherwise.
+"""
 By: Jabr Abumaali
 Started: Nov 8, 2023
 Completed: Nov 9, 2023
