@@ -63,11 +63,10 @@ def start_game():
         while x != "y" and x != "n":
             x = input("Would you like to play again? y/n: ")
 
-        # Only end the game when "n" is chosen.
         if x == "n":
             break
 
-        # Show 
+        # Show high score between games.
         print("High score: {}".format(min(records)))
         
     print("Thanks for playing!")
