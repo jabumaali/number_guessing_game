@@ -43,7 +43,7 @@ def start_game():
                         print("You won in {} attempts.\n".format(attempts))
                         ### The following if statement breaks my code (no longer
                         ### prompts for y/n, attempts continues no new numbers, etc)
-                        if attempts < min(records):
+                        if records and (attempts < min(records)):
                             print("New high score!")
                         records.append(attempts)
                         records.sort()
