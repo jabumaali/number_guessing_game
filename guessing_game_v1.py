@@ -3,7 +3,7 @@ Data Analysis Techdegree
 Project 1 - A Number Guessing Game
 By: Jabr Abumaali
 Started: Nov 8, 2023
-Completed: ----------
+Completed: Nov 9, 2023
 --------------------------------
 """
 import random
@@ -15,18 +15,18 @@ def start_game():
     # Initalize record of scores (list).
     records = []
 
-    # This outer while runs once per game, and ends when
-    # the user finally enters "n".
+    # This outer while runs once per game, and only
+    # ends when the user finally enters "n".
     while True:
         
-        # Generate a random number, and start the
-        # number of attempts at 0.
+        # Generate a random number, and
+        # start the number of attempts at 0.
         answer = random.randint(1,100)
         attempts = 0
         print("Please guess the number between 1 and 100!")
 
-        # This inner while continuously prompts the user until
-        # they find the correct answer.
+        # This inner while continuously prompts the
+        # user until they find the correct answer.
         while True:
             try:
                 x = int(input())
@@ -41,8 +41,7 @@ def start_game():
                     if x == answer:
                         print("You guessed it: {}!".format(answer))
                         print("You won in {} attempts.\n".format(attempts))
-                        ### The following if statement breaks my code (no longer
-                        ### prompts for y/n, attempts continues no new numbers, etc)
+                        # Notify user of new record!
                         if records and (attempts < min(records)):
                             print("New high score!")
                         records.append(attempts)
@@ -50,7 +49,7 @@ def start_game():
                         mean = round(statistics.mean(records), 2)
                         median = statistics.median(records)
                         mode = statistics.mode(records)
-                        print("Mean: {}\nMedian: {}\nMode: {}\n".format(mean, median, mode))
+                        print(f"Mean: {mean:.2f}\nMedian: {median}\nMode: {mode}\n")
                         # Only break when the correct answer is reached
                         break
             except ValueError:
