@@ -43,8 +43,8 @@ def start_game():
                     if x > answer:
                         print("Too high.")
                     if x == answer:
-                        print("You guessed it: {}!".format(answer))
-                        print("You won in {} attempts.\n".format(attempts))
+                        print(f"You guessed it: {answer}!")
+                        print(f"You won in {attempts:} attempts.\n")
                         # Notify user of new record!
                         if records and (attempts < min(records)):
                             print("New high score!")
@@ -67,7 +67,7 @@ def start_game():
             break
 
         # Show high score between games.
-        print("High score: {}".format(min(records)))
+        print(f"High score: {min(records)}")
         
     print("Thanks for playing!")
 
